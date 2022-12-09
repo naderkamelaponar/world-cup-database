@@ -15,7 +15,7 @@ echo "$($PSQL "truncate table games, teams;")"
 cat test_games.csv | while IFS="," read YEAR  ROUND  WINNER   OPPONENT  WINNER_GOALS  OPPONENT_GOALS
 do 
 
-  
+  echo $YEAR $ROUND $WINNER $OPPONENT   
   if [[ $YEAR != year ]]
   then
     # get winner id
